@@ -1,0 +1,6 @@
+git config --global user.name - specify name
+git config --global user.email - add email
+git add <file> - add a file to the staging area/make git track the file
+git status - specifies difference between staging area and commits
+git commit -m "message" - commits changes with message
+git push - pushes commits to server
