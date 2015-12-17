@@ -38,13 +38,26 @@ public class TempConversionWindow extends JFrame implements ActionListener{
     }
 
     public void actionPerformed(ActionEvent e){
-	if(e.equals("CtoF")){
+	String event = e.getActionCommand();
+	if(event.equals("CtoF")){
 	    String s = t1.getText();
-	    l1.setText(s);
+	    double n = Integer.parseInt(s);
+	    double out = CtoF(n);
+	    l1.setText("That is "+out+" degrees Fahrenheit.");
 	}
-	if(e.equals("FtoC")){
+	if(event.equals("FtoC")){
 	    String s = t1.getText();
-	    l1.setText(s);
+	    double n = Integer.parseInt(s);
+	    double out = FtoC(n);
+	    l1.setText("That is "+out+ "degrees Celsius.");  
 	}
+    }
+
+    public static double CtoF(double t){
+	return t * 1.8 + 32;
+    }
+
+    public static double FtoC(double t){
+	return (t - 32) / 1.8;
     }
 }
