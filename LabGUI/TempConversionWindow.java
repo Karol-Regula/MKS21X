@@ -29,7 +29,6 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 	b2.addActionListener(this);
 	b2.setActionCommand("FtoC");
 
-
 	pane.add(l2);
 	pane.add(t1);
 	pane.add(b1);
