@@ -8,7 +8,7 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 
     public TempConversionWindow(){
 	this.setTitle("Temperature Converter");
-	this.setSize(500,500);
+	this.setSize(600,200);
 	this.setLocation(50,50);
 	this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -16,7 +16,7 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 	pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
 	
 	JLabel l2 = new JLabel();
-	l2.setText("Enter temperature and press the desired conversion option");
+	l2.setText("Enter temperature and press the desired conversion option. -exceptions not yet handled");
 	t1 = new JTextField(5);
 
 	l1 = new JLabel();
@@ -48,7 +48,7 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 	    String s = t1.getText();
 	    double n = Integer.parseInt(s);
 	    double out = FtoC(n);
-	    l1.setText("That is "+out+ "degrees Celsius.");  
+	    l1.setText("That is "+out+ " degrees Celsius.");  
 	}
     }
 
