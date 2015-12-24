@@ -15,7 +15,8 @@ public class BarCode implements Comparable{
     
     // postcondition: Creates a copy of a bar code.
     public BarCode(BarCode x){
-	
+	_zip = x._zip;
+	_checkDigit = x._checkDigit;//could also use checkSum();
     }
     
     private int checkSum(){//checksum works
@@ -64,12 +65,14 @@ public class BarCode implements Comparable{
     public static void main(String[]args){
 	BarCode b1 = new BarCode("12345");
 	BarCode b2 = new BarCode("01980");
+	BarCode b3 = new BarCode("12345");
 	//	BarCode b3 = new BarCode("754209");
-	System.out.println(b1.checkSum());
-	System.out.println(b2.checkSum());
-	System.out.println(reference[0]);
+	//System.out.println(b1.checkSum());
+	//System.out.println(b2.checkSum());
+	//System.out.println(reference[0]);
 	System.out.println(b1.toString());
 	System.out.println(b2.toString());
+	System.out.println(b3.toString());
     }
     
 }
