@@ -50,7 +50,8 @@ public class BarCode implements Comparable{
     
     
     public boolean equals(Object other){
-	return true;
+	return other instanceof BarCode &&
+	    _zip.equals(((BarCode)other)._zip);
     }
     // postcondition: false if the object is not a BarCode, 
     // false if it is a non-matching barcode
@@ -73,6 +74,8 @@ public class BarCode implements Comparable{
 	System.out.println(b1.toString());
 	System.out.println(b2.toString());
 	System.out.println(b3.toString());
+	System.out.println(b1.equals(b2));
+	System.out.println(b1.equals(b3));
     }
     
 }
