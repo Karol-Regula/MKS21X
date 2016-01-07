@@ -62,6 +62,15 @@ public class Sorts{
 	}	
     }
 
+    public static void swap(int[] data){
+	int temp = 0;
+	for (int x = 0; x < data.length / 2; x++){
+	    temp = data[x];
+	    data[x] = data[data.length - 1 - x];
+	    data[data.length - 1 - x] = temp;
+	}
+    }
+
     public static String printArray(int[] ary){
 	String out = "{";
 	for(int x = 0; x < ary.length; x++){
@@ -70,14 +79,14 @@ public class Sorts{
 	return out.substring(0,out.length() - 1)+"}";
     }
 
-    public static void fillArray(int[] ary){
+    public static void fillRandom(int[] ary){
 	for(int x = 0; x < ary.length; x++){
 	    ary[x] = 0 + (int)(Math.random() * 10000);
 	}
     }
      public static void main(String[]args){
 	 int[] data1 = new int[100000];
-	 fillArray(data1);
+	 fillRandom(data1);
 	 int[] data2 = data1.clone();
 	 int[] data3 = data1.clone();
 	 int[] data4 = data1.clone();
