@@ -41,9 +41,26 @@ public class Sorts{
 	     data[end] = data[minPosition];
 	     data[minPosition] = tempValue;
 	     end++;
+	     //System.out.println(printArray(data));
 	 }
-
      }
+
+    public static void bubbleSort(int[]data){
+	int end = data.length;
+	int temp = 0;
+	while (end > 1){
+	    for (int x = 0; x < end - 1; x++){
+		temp = 0;
+		if (data[x] > data[x+1]){
+		    temp = data[x+1];
+		    data[x+1] = data[x];
+		    data[x] = temp;
+		}
+	    }
+	    //System.out.println(printArray(data));
+	    end--;
+	}	
+    }
 
     public static String printArray(int[] ary){
 	String out = "{";
@@ -63,9 +80,10 @@ public class Sorts{
 	 fillArray(data1);
 	 int[] data2 = data1.clone();
 	 int[] data3 = data1.clone();
-	 insertionSort(data1);//about 16.2 seconds on average
-	 //selectionSort(data2);//about 18.5 seconds on average
-	 
+	 int[] data4 = data1.clone();
+	 insertionSort(data2);//about 16.2 seconds on average
+	 //selectionSort(data3);//about 18.5 seconds on average
+	 //bubbleSort(data4);
 	 /*
 	 //testing if sorting works
 	 Arrays.sort(data1);
