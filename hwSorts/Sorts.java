@@ -85,11 +85,14 @@ public class Sorts{
 	}
     }
      public static void main(String[]args){
-	 int[] data1 = new int[100000];
+	 int[] data1 = new int[10];
 	 fillRandom(data1);
 	 int[] data2 = data1.clone();
 	 int[] data3 = data1.clone();
 	 int[] data4 = data1.clone();
+	 Arrays.sort(data1);
+	 swap(data1);
+	 System.out.println(printArray(data1));
 	 insertionSort(data2);//about 16.2 seconds on average
 	 //selectionSort(data3);//about 18.5 seconds on average
 	 //bubbleSort(data4);

@@ -29,9 +29,7 @@ public class Driver2{
         }
         if(order.equals("reversed")){
             Arrays.sort(ary);
-            for(int i = 0; i < ary.length / 2; i++){
-                Sorts.swap(ary);//changed
-            }
+	    Sorts.swap(ary);//changed
         }
 	
         long start = System.currentTimeMillis();
